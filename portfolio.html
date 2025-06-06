@@ -195,6 +195,36 @@
                 text-decoration: none;
                 margin: auto;
             }
+            .link-text {
+                color: #333;
+                text-decoration: underline;
+                cursor: pointer;
+                position: relative;
+                transition: color 0.2s;
+            }
+            .link-text:hover {
+                color: #ffbd59;
+            }
+            .link-text::after {
+                content: attr(title);
+                position: absolute;
+                background: #333;
+                color: #fff;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                white-space: nowrap;
+                top: -30px;
+                left: 0;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(5px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            .link-text:hover::after {
+                opacity: 1;
+                transform: translateY(0);
+            }
         </style>
     </head>
     <body>
@@ -213,7 +243,7 @@
             <div class="content">
                 <div class="container">
                     <h1 class="head-text">Portfolio</h1>
-                    <p class="subreg-text">Check out my portfolio! <br> Download my <a href="https://drive.google.com/uc?export=download&id=1x-HGdZWXkxTPjVQGiYa2tP0hENjOEVyy" download="NoahPeñaranda_Resume.pdf" style="color: #000;">resume</a> here.</p>
+                    <p class="subreg-text">Check out my portfolio! <br> Download my <a href="https://drive.google.com/uc?export=download&id=1x-HGdZWXkxTPjVQGiYa2tP0hENjOEVyy" download="NoahPeñaranda_Resume.pdf" class="link-text">resume</a> here.</p>
                 </div>
                 <br>
                 <div class="container">
@@ -249,7 +279,7 @@
             </div>
             <footer>
                 <div class="footer-content">
-                    <p>Copyright &copy; 2024 Noah Peñaranda. All rights reserved.</p>
+                    <p>Copyright &copy; 2025 Noah Peñaranda. All rights reserved.</p>
                 </div>
             </footer>
         </div>
