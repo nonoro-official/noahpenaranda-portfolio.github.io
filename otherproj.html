@@ -122,6 +122,42 @@
                 margin-left: 2vh;
                 margin-bottom: 3vh;
             }
+            .zoom-img {
+                transition: transform 0.3s ease;
+                cursor: zoom-in;
+            }
+            .zoom-img:hover {
+                transform: scale(1.1);
+            }
+            #zoom-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.85);
+                cursor: zoom-out;
+                z-index: 10000;
+            }
+            #zoom-modal img {
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 8px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+                animation: zoomIn 0.3s ease;
+            }
+            @keyframes zoomIn {
+                from {
+                    transform: scale(0.8);
+                    opacity: 0;
+                } to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
             .right-content {
                 flex: 1;
             }
@@ -245,43 +281,43 @@
                     <h1 class="subhead-title">Graphic Designs & Illustrations</h1>
                     <hr class="line">
                     <div class="image-content-container">
-                        <img src="art/dojacat.png" alt="Doja Cat Concert Poster" class="left-image">
+                        <img src="art/dojacat.png" alt="Doja Cat Concert Poster" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A concert poster I made of Doja Cat for art class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/hathor.png" alt="Hathor Splash Art" class="left-image">
+                        <img src="art/hathor.png" alt="Hathor Splash Art" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A splash art of Hathor I made for Araling Panlipunan class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/sekhmet.png" alt="Sekhmet Splash Art" class="left-image">
+                        <img src="art/sekhmet.png" alt="Sekhmet Splash Art" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A splash art of Sekhmet I made for Araling Panlipunan class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/harrypotter.png" alt="Harry Potter Book Cover" class="left-image">
+                        <img src="art/harrypotter.png" alt="Harry Potter Book Cover" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A book cover redesign I made of "Harry Potter and the Chamber of Secrets" for art class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/hutao.png" alt="Hu Tao Fanart" class="left-image">
+                        <img src="art/hutao.png" alt="Hu Tao Fanart" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A fanart I made of Hu Tao from Genshin Impact.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/eiggplant.png" alt="Eiggplant Fanart" class="left-image">
+                        <img src="art/eiggplant.png" alt="Eiggplant Fanart" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A fanart I made of Raiden Ei from Genshin Impact.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="art/yunjin.png" alt="Yunjin Fanart" class="left-image">
+                        <img src="art/yunjin.png" alt="Yunjin Fanart" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <p class="regular-text">A fanart I made of Yunjin from Genshin Impact.</p>
                         </div>
@@ -292,21 +328,21 @@
                     <h1 class="subhead-title">Presentations</h1>
                     <hr class="line">
                     <div class="image-content-container">
-                        <img src="presentations/ecommerce.png" alt="Ecommerce Website Presentation for Pandelitos" class="left-image">
+                        <img src="presentations/ecommerce.png" alt="Ecommerce Website Presentation for Pandelitos" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://www.canva.com/design/DAF1qE3MJjY/Ql3tsJG5_Ezhhm8YOzs9wA/view?utm_content=DAF1qE3MJjY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Ecommerce Website Presentation for Pandelitos</a></h1>
                             <p class="regular-text">A website presentation me and my groupmates made for application development class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="presentations/monsterfresh.png" alt="Monster Fresh Soap Presentation" class="left-image">
+                        <img src="presentations/monsterfresh.png" alt="Monster Fresh Soap Presentation" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://www.canva.com/design/DAFbNeRlco4/4UjmDLzRFY0z8-VWtofqsg/view?utm_content=DAFbNeRlco4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">Monster Fresh Soap Presentation</a></h1>
                             <p class="regular-text">A soap brand presentation I made for science class.</p>
                         </div>
                     </div>
                     <div class="image-content-container">
-                        <img src="presentations/likhain.png" alt="Pinoy Food Packaging Presentation" class="left-image">
+                        <img src="presentations/likhain.png" alt="Pinoy Food Packaging Presentation" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://www.canva.com/design/DAF1qQiAg7E/QVaclHFl0OQqm--pi8DOgQ/view?utm_content=DAF1qQiAg7E&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Pinoy Food Packaging Presentation</a></h1>
                             <p class="regular-text">A food packaging presentation me and my groupmates made for art class.</p>
@@ -318,7 +354,7 @@
                     <h1 class="subhead-title">Videos</h1>
                     <hr class="line">
                     <div class="image-content-container">
-                        <img src="videos/twelfthnight.png" alt="Twelfth Night Play" class="left-image">
+                        <img src="videos/twelfthnight.png" alt="Twelfth Night Play" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://drive.google.com/drive/folders/1mGawa9VB-OtmhHV5ijUKHa_mvRZSnkwC" target="_blank">Twelfth Night Play</a></h1>
                             <p class="regular-text">A collection of clips I edited for my school play "Twelfth Night".</p>
@@ -373,5 +409,19 @@
                 </div>
             </footer>
         </div>
+        <div id="zoom-modal" onclick="closeZoom()">
+            <img id="zoomed-img" />
+        </div>  
+        <script>
+            function openZoom(img) {
+                const modal = document.getElementById("zoom-modal");
+                const zoomedImg = document.getElementById("zoomed-img");
+                zoomedImg.src = img.src;
+                modal.style.display = "flex";
+            }
+            function closeZoom() {
+                document.getElementById("zoom-modal").style.display = "none";
+            }
+        </script>
     </body>
 </html>

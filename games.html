@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Noah's Personal Website</title>
+        <title>Noah's Portfolio</title>
         <style>
             html {
                 margin: 0;
@@ -122,6 +122,42 @@
                 margin-left: 2vh;
                 margin-bottom: 3vh;
             }
+            .zoom-img {
+                transition: transform 0.3s ease;
+                cursor: zoom-in;
+            }
+            .zoom-img:hover {
+                transform: scale(1.1);
+            }
+            #zoom-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.85);
+                cursor: zoom-out;
+                z-index: 10000;
+            }
+            #zoom-modal img {
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 8px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+                animation: zoomIn 0.3s ease;
+            }
+            @keyframes zoomIn {
+                from {
+                    transform: scale(0.8);
+                    opacity: 0;
+                } to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
             .right-content {
                 flex: 1;
             }
@@ -198,7 +234,7 @@
     </head>
     <body>
         <div id="main">
-            <h1 id="header-title">🍋 Noah's Personal Website 🍋</h1>
+            <h1 id="header-title">🍋 Noah's Portfolio 🍋</h1>
             <header class="navbar">
                 <nav>
                     <ul class="nav-links">
@@ -216,7 +252,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/roveri.png" alt="Rover I" class="left-image">
+                        <img src="game-titlescreens/roveri.png" alt="Rover I" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://sbsonk.itch.io/rover-i" target="_blank">Rover I</a></h1>
                             <p class="regular-text">A bubble themed 3D parkour/puzzle game my group made using Unity for the Global Game Jam 2025 @ CIIT.</p>
@@ -226,7 +262,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/throughyoureyes.png" alt="Through Your Eyes" class="left-image">
+                        <img src="game-titlescreens/throughyoureyes.png" alt="Through Your Eyes" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://drive.google.com/drive/folders/1BM5Fj3cUvaBRhbGei2yM6wGTDwMSkdAs?usp=sharing" target="_blank">Through Your Eyes</a></h1>
                             <p class="regular-text">A visual novel demo me and my groupmates made for art appreciation class using Ren'Py. Full game is still in development. Stay tuned!</p>
@@ -236,7 +272,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/rizzriot_theunwantedmagnet.png" alt="Rizz Riot: The Unwanted Magnet" class="left-image">
+                        <img src="game-titlescreens/rizzriot_theunwantedmagnet.png" alt="Rizz Riot: The Unwanted Magnet" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://drive.google.com/drive/folders/1pV02BCVchljkmWEYSbRjTckYM1FtpNcc?usp=sharing" target="_blank">Rizz Riot: The Unwanted Magnet</a></h1>
                             <p class="regular-text">A visual novel I made for game design class using Unity. To be reworked on soon!</p>
@@ -246,7 +282,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/schooldatingsim.png" alt="Fantasy School Dating Sim" class="left-image">
+                        <img src="game-titlescreens/schooldatingsim.png" alt="Fantasy School Dating Sim" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://drive.google.com/drive/folders/1g9Rrcs8YNZt6Lw317I2bXbHrVoD7Bmyx" target="_blank">Fantasy School Dating Sim</a></h1>
                             <p class="regular-text">A fantasy school dating simulator demo I made in the VND (Visual Novel Development) club using Ren'Py.</p>
@@ -256,7 +292,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/miro.png" alt="MIRO" class="left-image">
+                        <img src="game-titlescreens/miro.png" alt="MIRO" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://drive.google.com/drive/folders/1La1CJ2OLQdvmo7OWOzDhOpAPfZjOp6Bd" target="_blank">MIRO</a></h1>
                             <p class="regular-text">An apocalyptic adventure visual novel demo I made in the VND club using Ren'Py.</p>
@@ -266,7 +302,7 @@
                 <br>
                 <div class="container">
                     <div class="image-content-container">
-                        <img src="game-titlescreens/yahaha.png" alt="Yahaha Studios Games" class="left-image">
+                        <img src="game-titlescreens/yahaha.png" alt="Yahaha Studios Games" class="left-image zoom-img" onclick="openZoom(this)">
                         <div class="right-content">
                             <h1 class="subhead-text"><a href="https://nonoro-official.itch.io/" target="_blank">Yahaha Studios Games</a></h1>
                             <p class="regular-text">A collection of games I made for the Yahaha Studios game jams.</p>
@@ -281,5 +317,20 @@
                 </div>
             </footer>
         </div>
+        <div id="zoom-modal" onclick="closeZoom()">
+            <img id="zoomed-img" />
+        </div>  
+        <script>
+            function openZoom(img) {
+                const modal = document.getElementById("zoom-modal");
+                const zoomedImg = document.getElementById("zoomed-img");
+                zoomedImg.src = img.src;
+                modal.style.display = "flex";
+            }
+            function closeZoom() {
+                document.getElementById("zoom-modal").style.display = "none";
+            }
+        </script>
+
     </body>
 </html>
